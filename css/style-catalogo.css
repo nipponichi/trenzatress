@@ -1,0 +1,62 @@
+.productos {
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "producto" "producto" "producto" "producto"
+    "producto" "producto" "producto" "producto";
+}
+.titulo-principal {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.contenedor {
+    max-width: 1200px;
+    text-align: center;
+    margin: auto;
+}
+ 
+.producto {
+    max-width: 270px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 30%);
+    padding-bottom: 34px;
+    margin-bottom: 40px;
+}
+
+.producto img {
+    height: 300px;
+    width: 100%;
+}
+
+.producto p {
+    font-weight: 500;
+    padding: 0 20px;
+    margin-bottom: 24px;
+}
+
+.producto div p {
+    background-color: rgb(235, 168, 0);
+    color: #fff;
+    padding: 2px 7px 4px 21px;
+}
+
+.verProducto {
+    background: rgb(212, 116, 6);
+    padding: 9px 23px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 400;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.verProducto:hover {
+    background: #fff;
+    color: rgb(212, 116, 6);
+    border: solid 2px rgb(212, 116, 6);
+    transition-duration: .3s;
+}
+ 
