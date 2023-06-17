@@ -28,7 +28,7 @@ productosURL.forEach(producto => {
         const ref = producto.querySelector(".ref").textContent;
         //Pasa datos producto a nueva pestaña
         const urlDetalle = `detalle.html?imagen=${encodeURIComponent(imagen)}&titulo=${encodeURIComponent(titulo)}&precio=${encodeURIComponent(precio)}&ref=${encodeURIComponent(ref)}&totalProductos=${totalProductos}&cantidadTotal=${cantidad}`;
-        window.open(urlDetalle, "_blank");
+        window.location.href = urlDetalle;
         });
     });
 

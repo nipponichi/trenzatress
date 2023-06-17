@@ -24,31 +24,4 @@ refElement.textContent = ref;
 cantidadTotalElement.textContent = parseFloat(cantidadTotal).toFixed(2);
 totalProductosElement.textContent = parseInt(totalProductos);
 
-productosCarrito.forEach(producto => {
-    const añadirBtn = producto.querySelector(".anadirProducto");
-    añadirBtn.addEventListener("click", () => {
-      const imagen = producto.querySelector(".imagen").getAttribute("src");
-      const titulo = producto.querySelector(".titulo").textContent;
-      const precio = producto.querySelector(".precio").textContent;
-      const ref = producto.querySelector(".ref").textContent;
-      añadirProducto(imagen, titulo, precio, ref);
-    });
-  });
-  
-  function actualizarCarrito() {
-    //Actualiza el contador de productos
-    carrito.textContent = totalProductosCarrito;
-    //Actualiza cantidad total y se limita a dos decimales.
-    cantidadTotal.textContent = cantidad.toFixed(2);
-  }
-  
-  //Función para añadir un producto al carrito
-  function añadirProducto(imagen, titulo, precio, ref) {
-    const producto = { imagen, titulo, precio, ref };
-    productosArray.push(producto);
-    cantidad += parseFloat(producto.precio);
-    totalProductos++;
-  
-    //Actualiza el carrito
-    actualizarCarrito();
-  }
+
