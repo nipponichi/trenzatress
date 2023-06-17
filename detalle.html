@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style-detalle.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+	<header>
+        <img class="logo" src="media/img/logo.jpg" alt="Logo">
+        <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+        <nav class="nav" id="nav">
+            <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+            <ul class="nav-list">
+                <li><i class="fa fa-shopping-cart"><span class="totalProductos">0</span><span class="cantidad"></span></i></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html">Sobre Nosotros</a></li>
+                <li><a href="index.html">Contacto</a></li>
+            </ul>
+        </nav>     
+    </header>
+	<main>
+		<div class="contenedorImagen">
+			<img class="imagen" src="" alt="titulo">
+		</div>
+		<div class="contenedores">
+		<div class="contenedorDetalle">
+			<h2 class="titulo"></h2>
+			<p class="precio"></p>
+			<div class="referencia">
+				<label for="ref">ref:</label>
+				<p class="ref" id="ref"></p>
+			</div>
+			</div>
+			<div class="contenedorCarrito">
+				<div class="contenedorCantidad">
+					<label for="cantidad">Unidades:&nbsp;</label>
+					<input type="number" id="cantidad" placeholder="1" value="1" min="1"/>
+				</div>
+				<button class="anadirProducto">Añadir Producto</button>
+			</div>
+		<div class="contenedorDescripcion">
+				<h4>Descripción</h4>
+				<p>
+					Lorem ipsum dolor, sit amet consectetur adipisicing
+					elit. Laboriosam iure provident atque voluptatibus
+					reiciendis quae rerum, maxime placeat enim cupiditate
+					voluptatum, temporibus quis iusto. Enim eum qui delectus
+					deleniti similique? Lorem, ipsum dolor sit amet
+					consectetur adipisicing elit. Sint autem magni earum est
+					dolorem saepe perferendis repellat ipsam laudantium cum
+					assumenda quidem quam, vero similique? Iusto officiis
+					quod blanditiis iste?
+				</p>
+		</div>
+	</div>
+	</main>
+	<footer>
+        <div class="high-footer">
+            <div class="localizacion">
+                <h4>Localizacion</h4>
+                <ul>
+                    <li>Ctra. Callosa - Catral, 274 (Barrio San José-Lo Meca)</li>
+                    <li>03360 Callosa de Segura, Alicante</li>
+                </ul>
+            </div>
+            <div class="contacto">
+                <h4>Contacto</h4>
+                <ul>
+                    <li>Teléfono: +34 965310199</li>
+                    <li>Correo electronico: trenzatress@gmail.com</li>
+                </ul>
+            </div>
+            <div class="redes">
+                <h4>Redes Sociales</h4>
+                <ul>
+                    <li>Twitter: @trenzatress</li>
+                    <li>Instagram: @trenzatr3ss</li>
+                    <li>Facebook: @trenzatress</li>
+                </ul>
+            </div>
+        </div>
+        <div class="low-footer">
+            TrenzaTress, S.L
+        </div>
+    </footer>
+	<script src="js/detalle.js"></script>
+	<script src="js/navigation.js"></script>
+</body>
+</html>

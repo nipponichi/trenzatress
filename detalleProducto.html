@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Producto</title>
-    <link rel="stylesheet" href="css/style-catalogo.css">
+    <link rel="stylesheet" href="css/style-detalle.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
@@ -22,77 +22,21 @@
             </ul>
         </nav>    
     </header>
-    <div class="titulo-principal">
-        <h1>Catálogo TrenzaTress</h1>
-        <h3>PRODUCTOS</h3>
-    </div>
-    <section class="contenedor">
-        <div class="productos">
-            <div class="producto">
-                <div>
-                    <img class="imagen" src="media/img/cortinas.jpg" alt="cortinas">
-                    <p class="precio"><span>24.95</span>Є</p>
+    <section class="contenedor">    
+        <div class="detalles">
+            <div class="product-info">
+                <h2 class="titulo"></h2>
+                <p class="precio"></p>
+                <div class="cantidad">
+                    <label for="cantidad">Cantidad: </label>
+                    <input type="text" id="cantidad" value="1">
                 </div>
-                <p class="titulo">Cortina Seda Unicolor</p>
-                <button class="verProducto">Ver producto</button>
-            </div>
-            <div class="producto">
-                <div>
-                    <img class="imagen" src="media/img/cortina-japonesa.jpg" alt="cortina japonesa">
-                    <p class="precio"><span>9.95</span>Є</p>
-                </div>
-                <p class="titulo">Cortina Japonesa</p>
-                <button class="verProducto">Ver producto</button>
-            </div>
-            <div class="producto">
-                <div>
-                    <img class="imagen" src="media/img/cortina-romana.jpg" alt="cortina romana">
-                    <p class="precio"><span>22.95</span>Є</p>
-                </div>
-                <p class="titulo">Cortina Romana</p>
-                <button class="verProducto">Ver producto</button>  
-            </div>
-            <div class="producto">
-                <div>
-                    <img class="imagen" src="media/img/soporte-cortinas.jpg" alt="soporte cortinas">
-                    <p class="precio"><span>39.95</span>Є</p>
-                </div>
-                <p class="titulo">Soporte para Cortina</p>
-                <button class="verProducto">Ver producto</button>
-            </div>,
-            <div class="producto">
-                <div>
-                    <img class="imagen" src="media/img/borla-cordon.jpg" alt="borla cordo">
-                    <p class="precio"><span>6.95</span>Є</p>
-                </div>
-                <p class="titulo">Borla para Cordón</p>
-                <button class="verProducto">Ver producto</button>            
-            </div>
-            <div class="producto">
-                <div>
-                    <img class="imagen" src="media/img/esquineros-cortinas.jpg" alt="esquineros cortinas">
-                    <p class="precio"><span>12.95</span>Є</p>
-                </div>
-                <p class="titulo">Esquinero para Cortina</p>
-                <button class="verProducto">Ver producto</button>           
-            </div>
-            <div class="producto">
-                <div>
-                    <img class="imagen" src="media/img/cortinas3.jpg" alt="cortinas">
-                    <p class="precio"><span>23.95</span>Є</p>
-                </div>
-                <p class="titulo">Cortina Clásica Blanca</p>
-                <button class="verProducto">Ver producto</button>             
-            </div>
-            <div class="producto">
-                <div>
-                    <img class="imagen" src="media/img/panel-japones.jpg" alt="panel japones">
-                    <p class="precio"><span>19.95</span>Є</p>
-                </div>
-                <p class="titulo">Panel Japonés</p>
-                <button class="verProducto">Ver producto</button>              
-            </div>
+            </div>  
+            <img class="imagen" src="" alt="titulo">
+            <button class="anadirProducto">Añadir producto</button> 
         </div>
     </section>
+    <script src="js/detalle.js"></script>
+    <script src="js/navigation.js"></script>
 </body>
 </html>

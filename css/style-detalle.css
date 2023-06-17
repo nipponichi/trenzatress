@@ -1,0 +1,107 @@
+main {
+    margin-top: 10vh;
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    grid-template-areas: 
+    "contenedorImagen" "contenedores";
+    justify-content: center;
+}
+
+.contenedorImagen{
+    grid-area: imagen;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.contenedores{
+    grid-area: contenedores;
+    grid-column: 2;
+    grid-row: 1;
+    display:grid;
+    grid-template-rows: 3;
+    margin-right: 60vh;
+}
+
+.contenedorDetalle{
+    grid-area: detalles;
+    grid-row: 1;
+}
+
+.contenedorDetalle .precio {
+    margin-top: 10px;
+    font-weight: 600;
+    color: rgb(212, 116, 6);
+}
+
+.referencia{
+    margin-top: 10px;
+    color: rgb(181, 181, 181);
+}
+
+.ref{
+    display:inline;
+}
+
+.contenedorCantidad{
+    margin-top: 10px;
+    max-width: 100px;
+}
+
+.contenedorCarrito{
+    grid-area: boton;
+    grid-row: 2;
+}
+
+.contenedorDescripcion{
+    grid-area: descripcion;
+    grid-row: 3;
+}
+
+.contenedorImagen img {
+    border-radius: 5px;
+    width: 300px;
+    height: 100%; 
+    margin-left: 50vh;
+    max-width: 370px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 30%);
+    cursor: pointer;
+  }
+
+.anadirProducto {
+    margin-top: 10px;
+    grid-column: 2;
+    padding: 9px 23px;
+    background: rgb(212, 116, 6);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.anadirProducto:hover {
+    background: #fff;
+    color: rgb(212, 116, 6);
+    border: solid 2px rgb(212, 116, 6);
+    transition-duration: .3s;
+}
+
+.contenedorDescripcion{
+    margin-top: 10px;
+    text-align: justify;
+    max-width: 300px;
+}
+
+.contenedorDescripcion p{
+    margin-top: 10px;
+}
+
+footer{
+    margin-top: 160px;
+}
+
+.totalProductos {
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 50%;
+  }
