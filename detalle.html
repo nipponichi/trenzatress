@@ -18,7 +18,7 @@
             <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
             <ul class="nav-list">
                 <li><a href="catalogo.html"><i class="fa fa-arrow-left" id="volver"></i></a></li>
-                <li><i class="fa fa-shopping-cart"><span class="totalProductos">0</span><span class="cantidad"></span></i></li>
+                <li><i class="fa fa-shopping-cart" id="carrito"><span class="totalProductos">0</span><span class="cantidad"></span></i></li>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="index.html">Sobre Nosotros</a></li>
                 <li><a href="index.html">Contacto</a></li>
@@ -32,7 +32,7 @@
 		<div class="contenedores">
 		<div class="contenedorDetalle">
 			<h2 class="titulo"></h2>
-			<p class="precio"></p>
+			<p class="precio" id="precio"><span class="precioLimpio"></span>€</p>
 			<div class="referencia">
 				<label for="ref">ref:</label>
 				<p class="ref" id="ref"></p>
@@ -41,9 +41,9 @@
 			<div class="contenedorCarrito">
 				<div class="contenedorCantidad">
 					<label for="cantidad">Unidades:&nbsp;</label>
-					<input type="number" id="cantidad" placeholder="1" value="1" min="1"/>
+					<input type="number"class="cantidad" id="cantidad" placeholder="1" value="1" min="1"/>
 				</div>
-				<button class="anadirProducto" onclick="calcularPrecio()">Añadir Producto</button>
+				<button class="anadirProducto" id="anadirProducto">Añadir Producto</button>
 			</div>
 		<div class="contenedorDescripcion">
 				<h4>Descripción</h4>
@@ -91,6 +91,5 @@
         </div>
     </footer>
 	<script src="js/detalle.js"></script>
-	<script src="js/navigation.js"></script>
 </body>
 </html>
