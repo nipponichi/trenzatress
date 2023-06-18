@@ -60,7 +60,7 @@ const carritoURL = document.getElementById("volver");
       const urlCatalogo = `catalogo.html?totalProductos=${unidades}&cantidadTotal=${precio}`;
       console.log(urlCatalogo);
       window.location.href = urlCatalogo;
-    });
+});
 
  
 

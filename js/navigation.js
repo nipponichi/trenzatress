@@ -2,7 +2,7 @@ let productosArray = [];
 let totalProductos = 0;
 let cantidad = 0;
 
-/*
+
 const nav = document.querySelector("#nav");
 const abrir = document.querySelector("#abrir");
 const cerrar = document.querySelector("#cerrar");
@@ -14,7 +14,7 @@ abrir.addEventListener("click", () => {
 cerrar.addEventListener("click", () => {
     nav.classList.remove("visible");
 })
-*/
+
 //Toma todos los elementos de los objetos con clase producto
 const productosURL = document.querySelectorAll(".producto");
     
@@ -22,12 +22,12 @@ const productosURL = document.querySelectorAll(".producto");
 productosURL.forEach(producto => {
     const verProductoBtn = producto.querySelector(".imagen");
     verProductoBtn.addEventListener("click", () => {
-        const imagen = producto.querySelector(".imagen").getAttribute("src");
-        const titulo = producto.querySelector(".titulo").textContent;
-        const precio = producto.querySelector(".precioLimpio").textContent;
-        const ref = producto.querySelector(".ref").textContent;
+        let imagen = producto.querySelector(".imagen").getAttribute("src");
+        let titulo = producto.querySelector(".titulo").textContent;
+        let precio = producto.querySelector(".precioLimpio").textContent;
+        let ref = producto.querySelector(".ref").textContent;
         //Pasa datos producto a nueva pestaña
-        const urlDetalle = `detalle.html?imagen=${encodeURIComponent(imagen)}&titulo=${encodeURIComponent(titulo)}&precio=${encodeURIComponent(precio)}&ref=${encodeURIComponent(ref)}&totalProductos=${totalProductos}&cantidadTotal=${cantidad}`;
+        let urlDetalle = `detalle.html?imagen=${encodeURIComponent(imagen)}&titulo=${encodeURIComponent(titulo)}&precio=${encodeURIComponent(precio)}&ref=${encodeURIComponent(ref)}&totalProductos=${totalProductos}&cantidadTotal=${cantidad}`;
         window.location.href = urlDetalle;
         });
     });
@@ -43,10 +43,10 @@ const productosCarrito = document.querySelectorAll(".producto");
 productosCarrito.forEach(producto => {
   const añadirBtn = producto.querySelector(".anadirProducto");
   añadirBtn.addEventListener("click", () => {
-    const imagen = producto.querySelector(".imagen").getAttribute("src");
-    const titulo = producto.querySelector(".titulo").textContent;
-    const precio = producto.querySelector(".precioLimpio").textContent;
-    const ref = producto.querySelector(".ref").textContent;
+    let imagen = producto.querySelector(".imagen").getAttribute("src");
+    let titulo = producto.querySelector(".titulo").textContent;
+    let precio = producto.querySelector(".precioLimpio").textContent;
+    let ref = producto.querySelector(".ref").textContent;
     añadirProducto(imagen, titulo, precio, ref);
   });
 });
@@ -71,17 +71,49 @@ function actualizarCarrito() {
 }
 
 function desdeDetalle(){
-// Desglosamos datos del producto seleccionado en el catálogo
+//Desglosamos datos del producto seleccionado en el catálogo
 const urlProducto = new URLSearchParams(window.location.search);
 let cantidadTotal2 = parseFloat(urlProducto.get("precio"));
 let totalProductos2 = parseInt(urlProducto.get("unidades"));
 
-// Obtenemos los elementos del DOM usando clases
-const cantidadTotalElement = document.querySelector(".cantidad");
-const totalProductosElement = document.querySelector(".totalProductos");
+//Obtenemos los elementos del DOM usando clases
+let cantidadTotalElement = document.querySelector(".cantidad");
+let totalProductosElement = document.querySelector(".totalProductos");
 
-// Mostramos los parámetros en el HTML
+//Mostramos los parámetros en el HTML
 cantidadTotalElement.textContent = cantidadTotal2.toFixed(2);
 totalProductosElement.textContent = totalProductos2;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const formulario = document.getElementById('formulario');
+  formulario.addEventListener('submit', (evento) => {
+    evento.preventDefault();
+
+    //Pasamos valores de campos a variables
+    let nombre = document.querySelector('.nom').value;
+    let telefono = document.querySelector('.tel').value;
+    let apellidos = document.querySelector('.apel').value;
+    let correo = document.querySelector('.correo').value;
+    let mensaje = document.querySelector('textarea').value;
+
+    //Verificamos si los campos están vacíos
+    if (!nombre || !telefono || !apellidos || !correo || !mensaje) {
+      swal("Error","Completa los campos del formulario","warning");
+      return;
+    }
+
+    swal("Perfecto","Formulario enviado correctamente","success");
+    
+    //Restablece los campos del formulario
+    formulario.reset();
+  });
+});
+
+
+
+
+
+
+
     

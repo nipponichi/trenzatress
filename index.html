@@ -19,12 +19,12 @@
             <ul class="nav-list">
                 <li><a href="catalogo.html">Productos</a></li>
                 <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#formulario">Contacto</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <div class="intro"> 
+        <div class="intro" id="sobre-nosotros"> 
             <div class="text">
                 <h1>Cordeleria de alta calidad</h1>
                 <p>
@@ -36,7 +36,7 @@
                     para mosquiteras
                     y en general cordones trenzados para la decoración.
                 </p>
-                <div class="boton-productos">Ver Productos</div>
+                <div class="boton-productos"><a href="catalogo.html">Ver Productos</a></div>
             </div>
             <img src="media/img/img.jpg">
         </div>
@@ -65,20 +65,22 @@
                 </p>
             </div>
         </div>
-        <div class="formulario">
-            <h1>Contacta con nosotros</h1>
-            <div class="info">
-                <input class="nom" type="text" placeholder="Nombre">
-                <input class="tel" type="text" placeholder="Telefono">
+        <form action="php/gestion.php" method="post" id="formulario">
+            <div class="formulario">
+                <h2>Contacta con nosotros</h2>
+                <div class="info">
+                    <input class="nom" type="text" placeholder="Nombre">
+                    <input class="tel" type="text" placeholder="Teléfono">
+                </div>
+                <div class="info">
+                    <input class="apel" type="text" placeholder="Apellidos">
+                    <input class="correo" type="text" placeholder="Correo">
+                </div>
+                <textarea class="reason" cols="60" rows="10" placeholder="Tu mensaje"></textarea>
+                <br>
+                <button type="submit">Enviar</button>
             </div>
-            <div class="info">
-                <input class="apel" type="text" placeholder="Apellidos">
-                <input class="correo" type="text" placeholder="Correo">
-            </div>
-            <textarea cols="60" rows="10" placeholder="Tu mensaje"></textarea>
-            <br>
-            <button type="submit">Enviar</button>
-        </div>
+        </form>
     </main>
     <footer>
         <div class="high-footer">
@@ -109,5 +111,6 @@
             TrenzaTress, S.L
         </div>
     </footer>
+<script src="js/navigation.js"></script>
 </body>
 </html>
