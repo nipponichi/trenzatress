@@ -32,6 +32,7 @@ header {
     display: none;
 }
 
+
 @media screen and (max-width: 550px) {
     .abrir-menu,
     .cerrar-menu {
@@ -80,7 +81,6 @@ header {
         color: #ecececec;
     }
 }
-
 
 
 body main .intro{
