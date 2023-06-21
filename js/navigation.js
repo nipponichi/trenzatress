@@ -29,9 +29,9 @@ productosURL.forEach(producto => {
         let titulo = producto.querySelector(".titulo").textContent;
         let precio = producto.querySelector(".precioLimpio").textContent;
         let ref = producto.querySelector(".ref").textContent;
-        //Pasa datos producto a nueva pestaña
+        //Pasa datos producto en forma de url a una variable
         let urlDetalle = `detalle.html?imagen=${encodeURIComponent(imagen)}&titulo=${encodeURIComponent(titulo)}&precio=${encodeURIComponent(precio)}&ref=${encodeURIComponent(ref)}&totalProductos=${totalProductos}&cantidadTotal=${cantidad}`;
-        //devuelve el resultado en forma de url
+        //La pestaña toma esa url como destino al que navegar 
         window.location.href = urlDetalle;
         });
     });
